@@ -18,6 +18,15 @@ RUN apt-get -y install \
     libnewlib-dev
     
 RUN apt-get -y install \
+	curl \
+	wget \
+	nano \
+	git \
+	subversion \
+	p7zip \
+	unzip \
+	libpcre3 \
+	pcregrep \
 	build-essential \
 	gcc-multilib \
 	gcc-4.8-multilib \
@@ -46,7 +55,6 @@ RUN apt-get -y install \
 	libncurses5-dev \
 	lib32ncurses5-dev \
 	tk-dev \
-	git
 
 ADD https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz /home/Downloads/
 WORKDIR /home/Downloads/
