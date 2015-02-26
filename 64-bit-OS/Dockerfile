@@ -59,14 +59,14 @@ RUN tar zxvf docutils-0.12.tar.gz
 WORKDIR /home/Downloads/docutils-0.12
 RUN /opt/pym32/bin/python setup.py install
 
-RUN git clone https://github.com/asifsardar26/Runtime.git /home/Runtime
-RUN git --git-dir /home/Runtime/.git --work-tree /home/Runtime checkout feature-encX24J600-wip
+#RUN git clone https://github.com/asifsardar26/Runtime.git /home/Runtime
+#RUN git --git-dir /home/Runtime/.git --work-tree /home/Runtime checkout feature-encX24J600-wip
 
-RUN git clone https://github.com/asifsardar26/ELL-i-PyBot-Tests /home/Runtime/robot_tests/
+#RUN git clone https://github.com/asifsardar26/ELL-i-PyBot-Tests /home/Runtime/robot_tests/
 
-RUN git clone git://github.com/RIOT-OS/RIOT /home/RIOT
+#RUN git clone git://github.com/RIOT-OS/RIOT /home/RIOT
 
-VOLUME ["/home"]
+#VOLUME ["/home"]
 
 WORKDIR /home
 
