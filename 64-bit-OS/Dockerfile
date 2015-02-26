@@ -9,12 +9,15 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN echo "deb http://ppa.launchpad.net/terry.guo/gcc-arm-embedded/ubuntu trusty main" > /etc/apt/sources.list.d/gcc-arm-embedded.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key FE324A81C208C89497EFC6246D1D8367A3421AFB
 
+RUN apt-get update 
+RUN apt-get -y dist-upgrade
+
 # Cortex-M development
 RUN apt-get -y install \
     gcc-arm-none-eabi \
     libnewlib-dev
     
-RUN apt-get update && apt-get install -y \
+RUN apt-get -y install \
 	build-essential \
 	gcc-multilib \
 	gcc-4.8-multilib \
