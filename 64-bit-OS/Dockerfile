@@ -6,14 +6,20 @@ RUN dpkg --add-architecture i386
 
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN echo "deb http://ppa.launchpad.net/terry.guo/gcc-arm-embedded/ubuntu trusty main" > /etc/apt/sources.list.d/gcc-arm-embedded.list
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key FE324A81C208C89497EFC6246D1D8367A3421AFB
+
+# Cortex-M development
+RUN apt-get -y install \
+    gcc-arm-none-eabi \
+    libnewlib-dev
+    
 RUN apt-get update && apt-get install -y \
 	build-essential \
 	gcc-multilib \
 	gcc-4.8-multilib \
 	g++-multilib \
 	g++-4.8-multilib \
-	#ia32-libs \
-	#ia32-libs-multiarch \
 	libc6-dev \
 	libgmp-dev \
 	libmpfr-dev \
