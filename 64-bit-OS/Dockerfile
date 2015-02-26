@@ -54,7 +54,7 @@ RUN apt-get -y install \
 	libbz2-dev \
 	libncurses5-dev \
 	lib32ncurses5-dev \
-	tk-dev \
+	tk-dev
 
 ADD https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz /home/Downloads/
 WORKDIR /home/Downloads/
