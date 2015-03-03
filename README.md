@@ -11,8 +11,6 @@ In RIOT OS, we are interested only in:
 - Native platform
 - Cortex-M development platform
 
-How to build docker images and running docker containers:
-
 ### Docker install
 
 ### Pulling images
@@ -21,6 +19,6 @@ How to build docker images and running docker containers:
 
 ### Running images
 
-***Mounting <local working directory> to docker images***
+- **Mounting data to docker images**
 
 ---> Work in progress
