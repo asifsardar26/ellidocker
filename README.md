@@ -2,9 +2,9 @@
 
 Dockerfiles for creating docker images containing build environment for:
 
-- Ell-i Runtime
-- Robot Framework
-- RIOT OS
+- [Ell-i Runtime][3]
+- [Robot Framework][5]
+- [RIOT OS][4]
 
 In RIOT OS, we are interested only in:
 
@@ -51,26 +51,29 @@ docker run -i -t asifsardar26/ellidocker:32-bit
 
 - **Mounting data to docker images**
 
-The local data can be mounted to the images in order to build, run and compile:
+    The local data can be mounted to the images in order to build, run and compile:
 
-- Ell-i Runtime and Robot Tests
-- RIOT OS
+    - Ell-i Runtime and Robot Tests
+    - RIOT OS
 
-The local data is mounted to the built image as 'docker run -i -t -u $UID -v /path/to/working/directory:/home IMAGE-NAME:TAG' e.g.
+    The local data is mounted to the built image as 'docker run -i -t -u $UID -v /path/to/working/directory:/home      IMAGE-NAME:TAG' e.g.
 
-For Ell-i Runtime and Robot Tests:
+    For Ell-i Runtime and Robot Tests:
 
-```
-docker run -i -t -u $UID -v ~/Runtime/:/home asifsardar26/ellidocker:32-bit
-```
+    ```
+    docker run -i -t -u $UID -v ~/Runtime/:/home asifsardar26/ellidocker:32-bit
+    ```
 
-For RIOT:
+    For RIOT:
 
-```
-docker run -i -t -u $UID -v ~/RIOT/:/home asifsardar26/ellidocker:32-bit
-```
+    ```
+    docker run -i -t -u $UID -v ~/RIOT/:/home asifsardar26/ellidocker:32-bit
+    ```
 
 
 
 [1]: https://docs.docker.com/installation/ubuntulinux/
 [2]: https://docs.docker.com/installation/ubuntulinux/#giving-non-root-access
+[3]: https://github.com/Ell-i/Runtime.git
+[4]: https://github.com/RIOT-OS/RIOT.git
+[5]: http://robotframework.org/
