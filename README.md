@@ -21,25 +21,25 @@ To give non-root acess to docker client, please follow [Non-root Access][2].
 
 ### Pulling images
 
-To pull image from dockerhub registry, run docker as **docker pull <IMAGE-NAME>:<TAG>** e.g.
+To pull image from dockerhub registry, run docker as **docker pull IMAGE-NAME:TAG** e.g.
 
-'''
+...
 docker pull asifsardar26/ellidocker:32-bit
-'''
+...
 
 ### Building images
 
-To build a docker image, run the docker as **docker build -t <IMAGE-NAME> <path-to-docker-file>** e.g.
+To build a docker image, run the docker as **docker build -t IMAGE-NAME PATH-TO-DOCKERFILE** e.g.
 
-'''
+...
 docker build -t ellidocker /path-to-dockerfile/Dockerfile
-'''
+...
 
 To rebuild the docker image with up to date software run:
 
-'''
+...
 docker build -t ellidocker /path-to-dockerfile/Dockerfile --no-cache
-'''
+...
 
 ### Running images
 
