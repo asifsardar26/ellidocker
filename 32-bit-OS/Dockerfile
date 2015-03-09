@@ -21,6 +21,9 @@ RUN apt-get -y install \
 	nano \
 	p7zip \
 	unzip \
+	pkg-config \
+	python \
+	python-dev \
 	python2.7 \
 	python2.7-dev \
 	python-setuptools \
