@@ -32,6 +32,9 @@ RUN apt-get -y install \
 	gcc-4.8-multilib \
 	g++-multilib \
 	g++-4.8-multilib \
+	lib32z1 \
+	lib32ncurses5 \
+	lib32bz2-1.0 \
 	libc6-dev \
 	libgmp-dev \
 	libmpfr-dev \
