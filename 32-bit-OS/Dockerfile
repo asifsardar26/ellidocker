@@ -10,15 +10,6 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key FE324A81C208C89497EF
 RUN apt-get update 
 RUN apt-get -y dist-upgrade
 
-# Cortex-M development
-RUN apt-get -y install \
-    gcc-arm-none-eabi \
-    libnewlib-dev
-
-WORKDIR /home/
-RUN git clone https://github.com/Ell-i/stm32flash.git
-RUN export PATH=${PATH}:/home/stm32flash/
-
 RUN apt-get -y install \
 	make \
 	gcc \
@@ -36,12 +27,20 @@ RUN apt-get -y install \
 	bridge-utils \
 	libpcre3 \
 	pcregrep
-	
+
+# Cortex-M development
+RUN apt-get -y install \
+    gcc-arm-none-eabi \
+    libnewlib-dev
+
 #ADD https://launchpad.net/gcc-arm-embedded/4.9/4.9-2014-q4-major/+download/gcc-arm-none-eabi-4_9-2014q4-20141203-linux.tar.bz2 /home/Downloads/
 #WORKDIR /home/Downloads/
 #RUN tar xvjf gcc-arm-none-eabi-4_9-2014q4-20141203-linux.tar.bz2
-
 #ENV PATH /home/Downloads/gcc-arm-none-eabi-4_9-2014q4/bin:$PATH
+
+WORKDIR /home/
+RUN git clone https://github.com/Ell-i/stm32flash.git
+RUN export PATH=${PATH}:/home/stm32flash/
 
 RUN easy_install -Z robotframework
 RUN easy_install -Z docutils
