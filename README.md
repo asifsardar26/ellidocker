@@ -61,13 +61,13 @@ docker run -i -t asifsardar26/ellidocker:32-bit
     For Ell-i Runtime and Robot Tests:
 
     ```
-    docker run -i -t -u $UID -v ~/Runtime/:/home asifsardar26/ellidocker:32-bit
+    docker run -i -t -v ~/Runtime/:/home/Runtime/ asifsardar26/ellidocker:32-bit
     ```
 
     For RIOT:
 
     ```
-    docker run -i -t -u $UID -v ~/RIOT/:/home asifsardar26/ellidocker:32-bit
+    docker run -i -t -u $UID -v ~/RIOT/:/home/RIOT/ asifsardar26/ellidocker:32-bit
     ```
 
 
