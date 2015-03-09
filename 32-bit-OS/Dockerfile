@@ -15,6 +15,10 @@ RUN apt-get -y install \
     gcc-arm-none-eabi \
     libnewlib-dev
 
+WORKDIR /home/
+RUN git clone https://github.com/Ell-i/stm32flash.git
+RUN export PATH=${PATH}:/home/stm32flash/
+
 RUN apt-get -y install \
 	make \
 	gcc \
