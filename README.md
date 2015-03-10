@@ -9,7 +9,7 @@ Dockerfiles for creating docker images containing build environment for:
 In RIOT OS, we are interested only in:
 
 - Native platform
-- Cortex-M development platform
+- Cortex-M 32-bit microcontrollers development platform
 
 ### Docker install
 
