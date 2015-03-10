@@ -29,16 +29,16 @@ docker pull asifsardar26/ellidocker:32-bit
 
 ### Building images
 
-To build a docker image, run the docker as 'docker build -t IMAGE-NAME PATH-TO-DOCKERFILE' e.g.
+To build a docker image, run the docker as 'docker build -t IMAGE-NAME:TAG --rm PATH-TO-DOCKERFILE' e.g.
 
 ```
-docker build -t ellidocker /path-to-dockerfile/Dockerfile
+docker build -t ellidocker:32-bit --rm /path-to-dockerfile/Dockerfile
 ```
 
 To rebuild the docker image with up to date software run:
 
 ```
-docker build -t ellidocker /path-to-dockerfile/Dockerfile --no-cache
+docker build -t ellidocker:32-bit --rm /path-to-dockerfile/Dockerfile --no-cache
 ```
 
 ### Running images
@@ -69,6 +69,33 @@ docker run -i -t asifsardar26/ellidocker:32-bit
     ```
     docker run -i -t -u $UID -v ~/RIOT/:/home/RIOT/ asifsardar26/ellidocker:32-bit
     ```
+
+### Deleting images
+
+To delete an image from the local machine, run docker as 'docker rmi IMAGE-NAME:TAG' e.g.
+
+```
+docker rmi ellidocker:32-bit
+```
+To remove all the images, run docker as:
+
+```
+docker rmi $(docker images)
+```
+
+### Deleting containers
+
+To delete a container from local machine, run docker as 'docker rm CONTAINER-ID' e.g.
+
+```
+docker rm 81430863ea88
+```
+
+To delete all containers from local machine, run docker as:
+
+```
+docker rm $(docker ps -a -q)
+```
 
 
 
