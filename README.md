@@ -56,7 +56,7 @@ docker run -i -t asifsardar26/ellidocker:32-bit
     - Ell-i Runtime and Robot Tests
     - RIOT OS
 
-    The local data is mounted to the built image as 'docker run -i -t -u $UID -v /path/to/working/directory:/home      IMAGE-NAME:TAG' e.g.
+    The local data is mounted to the built image as 'docker run -i -t -v /PWD/:/home/PWD/ IMAGE-NAME:TAG' e.g.
 
     For Ell-i Runtime and Robot Tests:
 
@@ -65,6 +65,8 @@ docker run -i -t asifsardar26/ellidocker:32-bit
     ```
 
     For RIOT:
+    
+    Use the userid '-u $UID' also e.g.
 
     ```
     docker run -i -t -u $UID -v ~/RIOT/:/home/RIOT/ asifsardar26/ellidocker:32-bit
