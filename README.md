@@ -32,13 +32,13 @@ docker pull asifsardar26/ellidocker:32-bit
 To build a docker image, run the docker as 'docker build -t IMAGE-NAME:TAG --rm PATH-TO-DOCKERFILE' e.g.
 
 ```
-docker build -t ellidocker:32-bit --rm /path-to-dockerfile/Dockerfile
+docker build -t ellidocker:32-bit --rm /path-to-dockerfile/
 ```
 
 To rebuild the docker image with up to date software run:
 
 ```
-docker build -t ellidocker:32-bit --rm /path-to-dockerfile/Dockerfile --no-cache
+docker build -t ellidocker:32-bit --rm /path-to-dockerfile/ --no-cache
 ```
 
 ### Running images
